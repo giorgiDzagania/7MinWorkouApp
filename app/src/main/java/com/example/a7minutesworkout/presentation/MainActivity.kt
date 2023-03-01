@@ -1,10 +1,8 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import android.widget.Toast
 import com.example.a7minutesworkout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,17 +15,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         binding?.flStart?.setOnClickListener {
-            val intent = Intent(this,ExerciseActivity::class.java)
+            val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)
         }
 
         binding?.flBMI?.setOnClickListener {
-            val intent = Intent(this,BMIActivity::class.java)
+            val intent = Intent(this, BMIActivity::class.java)
             startActivity(intent)
         }
 
         binding?.FlHistory?.setOnClickListener {
-            val intent = Intent(this,HistoryActivity::class.java)
+            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
 

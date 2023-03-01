@@ -1,10 +1,10 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.a7minutesworkout.databinding.ActivityHistoryBinding
+import com.example.a7minutesworkout.R
 import com.example.a7minutesworkout.databinding.ItemHistoryRawBinding
 
 class HistoryAdapter(private var items: ArrayList<String>)
@@ -24,11 +24,13 @@ class HistoryAdapter(private var items: ArrayList<String>)
         if(position % 2 == 0){
             holder.llHistoryItemMain.setBackgroundColor(
                 ContextCompat.getColor(holder.itemView.context,
-                R.color.lightGray))
+                    R.color.lightGray
+                ))
         }else{
             holder.llHistoryItemMain.setBackgroundColor(
                 ContextCompat.getColor(holder.itemView.context,
-                R.color.white))
+                    R.color.white
+                ))
         }
 
     }

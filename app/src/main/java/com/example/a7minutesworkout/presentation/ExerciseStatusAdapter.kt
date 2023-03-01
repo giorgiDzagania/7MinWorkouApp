@@ -1,11 +1,13 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.a7minutesworkout.R
 import com.example.a7minutesworkout.databinding.ItemExerciseStatusBinding
+import com.example.a7minutesworkout.model.ExerciseModel
 
 class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>)
     : RecyclerView.Adapter<ExerciseStatusAdapter.ViewHolder>(){
@@ -22,18 +24,21 @@ class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>)
             model.getIsSelected() -> {
                 holder.tvItem.background =
                     ContextCompat.getDrawable(holder.itemView.context,
-                    R.drawable.item_thin_accent_green_color_background)
+                        R.drawable.item_thin_accent_green_color_background
+                    )
                 holder.tvItem.setTextColor(Color.parseColor("#212121"))
             }
             model.getIsCompleted() -> {
                 holder.tvItem.background =
                     ContextCompat.getDrawable(holder.itemView.context,
-                    R.drawable.item_circular_color_accent_background)
+                        R.drawable.item_circular_color_accent_background
+                    )
                 holder.tvItem.setTextColor(Color.parseColor("#FFFFFF"))
             }else -> {
                 holder.tvItem.background =
                     ContextCompat.getDrawable(holder.itemView.context,
-                    R.drawable.item_circular_color_gray_background)
+                        R.drawable.item_circular_color_gray_background
+                    )
                 holder.tvItem.setTextColor(Color.parseColor("#212121"))
             }
         }

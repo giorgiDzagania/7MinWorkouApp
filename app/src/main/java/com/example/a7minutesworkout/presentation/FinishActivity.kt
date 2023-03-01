@@ -1,4 +1,4 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import android.icu.util.Calendar
 import android.os.Build
@@ -7,6 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.lifecycleScope
+import com.example.a7minutesworkout.database.HistoryDao
+import com.example.a7minutesworkout.database.HistoryEntity
+import com.example.a7minutesworkout.app.WorkoutApp
 import com.example.a7minutesworkout.databinding.ActivityFinishBinding
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat

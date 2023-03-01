@@ -1,9 +1,10 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.a7minutesworkout.R
 import com.example.a7minutesworkout.databinding.ActivityBmiBinding
 import java.math.BigDecimal
 import java.math.RoundingMode

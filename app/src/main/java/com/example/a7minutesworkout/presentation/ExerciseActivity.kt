@@ -1,7 +1,6 @@
-package com.example.a7minutesworkout
+package com.example.a7minutesworkout.presentation
 
 import android.app.Dialog
-import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -11,10 +10,12 @@ import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.a7minutesworkout.*
+import com.example.a7minutesworkout.constants.Constants
 import com.example.a7minutesworkout.databinding.ActivityExerciseBinding
 import com.example.a7minutesworkout.databinding.DialogCustomBackConfirmationBinding
+import com.example.a7minutesworkout.model.ExerciseModel
 import java.util.Locale
 
 class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
@@ -176,7 +177,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     setupRestView()
                 }else{
                     finish()
-                    val intent = Intent(this@ExerciseActivity,FinishActivity::class.java)
+                    val intent = Intent(this@ExerciseActivity, FinishActivity::class.java)
                     startActivity(intent)
                 }
             }
